@@ -6,6 +6,13 @@
 
 export default class LNumber {
     public isNumber(val: any): boolean {
-        return Object.prototype.toString.call(val) === '[object Number]';
+        return (
+            !this.isNaN(val) &&
+            Object.prototype.toString.call(val) === '[object Number]'
+        );
+    }
+
+    public isNaN(val: any): boolean {
+        return Number.isNaN(val);
     }
 }
