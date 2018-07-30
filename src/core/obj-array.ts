@@ -15,6 +15,28 @@ export default class ObjArray extends Array {
         this.value = val;
     }
 
+    public static GROUP(key: string, arr: any[]): ObjArray {
+        const result: IObj = {};
+        const resultArr: IObj[] = [];
+        for (const i of arr) {
+            if (i.hasOwnProperty(key)) {
+                // 必须有key
+                if (result.hasOwnProperty(i[key])) {
+                    // result 中有这个key了
+                    Object.assign(result[i[key]], i);
+                } else {
+                    result[i[key]] = i;
+                }
+            }
+        }
+        const keys: string[] = Object.keys(result);
+        for (const i of keys) {
+            resultArr.push(result[i]);
+        }
+
+        return new ObjArray(resultArr);
+    }
+
     public valueOf(): any[] {
         return this.value;
     }

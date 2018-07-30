@@ -21,4 +21,23 @@ window.onload = () => {
 
     console.log(b.key('a'));
     console.log(b.findOne('a', 3));
+    const c = util.ObjArray.GROUP('type', [
+        {
+            a: 1,
+            type: 1,
+        },
+        {
+            b: 2,
+            type: 1,
+        },
+        {
+            a: 3,
+            type: 2,
+        },
+        {
+            b: 4,
+            type: 2,
+        },
+    ]);
+    console.log(c);
 };
