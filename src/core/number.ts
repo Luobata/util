@@ -4,7 +4,7 @@
 
 // tslint:disable no-any no-unsafe-any
 
-export default class LNumber {
+export default class LNumber extends Number {
     public isNumber(val: any): boolean {
         return (
             !this.isNaN(val) &&
