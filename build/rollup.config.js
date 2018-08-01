@@ -7,13 +7,13 @@ import path from 'path';
 import typescript from 'rollup-plugin-typescript2';
 
 module.exports = {
-    input: 'src/luobata-util.ts',
+    input: 'src/index.js',
     name: 'luobata-util',
     sourcemap: true,
     output: {
-        file: 'dist/luobata-util.esm.js',
+        file: 'dist/util.esm.js',
         format: 'es',
-        name: 'luobata-util',
+        name: 'util',
         sourcemap: true,
     },
     plugins: [
