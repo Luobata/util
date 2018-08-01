@@ -71,4 +71,15 @@ export default class LNumber extends Number {
 
         return dot ? `${result}.${dot}` : result;
     }
+
+    public percent(val: number | string, fixed?: number): string {
+        let value!: number;
+        if (isString(val)) {
+            value = parseFloat(val);
+        } else {
+            value = val;
+        }
+
+        return fixed ? `${(value * 100).toFixed(fixed)}%` : `${value * 100}%`;
+    }
 }
