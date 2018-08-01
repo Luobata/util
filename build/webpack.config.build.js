@@ -19,9 +19,9 @@ var prodWebpackConfig = {
     entry: root + '/src/index.js',
     output: {
         path: assetsRoot,
-        library: 'bundle',
+        library: 'util',
         libraryTarget: 'umd',
-        filename: 'bundle.js',
+        filename: 'util.js',
     },
     plugins: [
         new webpack.DefinePlugin({

@@ -7,11 +7,10 @@
 import { isArray, isObject } from '@/lib/help';
 import { IObj } from '@/lib/interface';
 
-export default class ObjArray extends Array {
+export default class ObjArray {
     public value: IObj[];
 
     constructor(val: IObj[]) {
-        super();
         this.check(val);
         this.value = val;
     }
