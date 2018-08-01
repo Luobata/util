@@ -1,7 +1,7 @@
 import util from '../src/';
 // import util from '../dist/util'
-// import { objArray, ObjArray, number, string } from '../dist/util';
-import { objArray, ObjArray, number, string } from '../src/';
+import { objArray, ObjArray, number, string } from '../dist/util';
+// import { objArray, ObjArray, number, string } from '../src/';
 
 window.onload = () => {
     const a = util.number.isNumber(NaN);
@@ -16,7 +16,8 @@ window.onload = () => {
     console.log(number.split('123456.22', 3, ','));
     console.log(string.camel('abc-cd'));
 
-    const b = new util.ObjArray([
+    console.log(ObjArray);
+    const b = new ObjArray([
         {
             a: 1,
             b: 2,
@@ -30,7 +31,8 @@ window.onload = () => {
 
     console.log(b.key('a'));
     console.log(b.findOne('a', 3));
-    const c = util.ObjArray.GROUP('type', [
+    console.log(objArray);
+    const c = ObjArray.GROUP('type', [
         {
             a: 1,
             type: 1,
