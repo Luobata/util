@@ -3,7 +3,7 @@
  */
 
 // tslint:disable no-any no-unsafe-any
-import { isString } from '@/lib/help';
+import { isNumber, isString } from '@/lib/help';
 
 export default class LNumber extends Number {
     /**
@@ -17,10 +17,7 @@ export default class LNumber extends Number {
      * is a number (expect NaN)
      */
     public isNumber(val: any): boolean {
-        return (
-            !this.isNaN(val) &&
-            Object.prototype.toString.call(val) === '[object Number]'
-        );
+        return !this.isNaN(val) && isNumber(val);
     }
 
     /**
